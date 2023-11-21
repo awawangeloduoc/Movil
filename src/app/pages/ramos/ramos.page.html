@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+  <ion-list *ngFor="let ramo of ramos">
+    <ion-card button (click)="toggleContent(ramo.id)">
+      <ion-card-header>
+        <ion-card-title>{{ramo.nombre_asignatura}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="ramo.showContent">
+        <ion-grid>
+          <ion-row class="cuadro">
+            <ion-col sizeLg="4" sizeMd="4" sizeXs="8">
+              <div class="fec">
+                <ion-label class="ion-no-margin">FECHA</ion-label>
+              </div>
+              <ion-list
+                class="fechas pad"
+                *ngFor="let asist of asistencia[ramo.id]"
+              >
+                {{asist['fecha'] | date:'EEEE d MMMM y'}}
+              </ion-list>
+            </ion-col>
+            <ion-col>
+              <div class="asis"><ion-label>Asistencia</ion-label></div>
+              <div
+                class="asistencias"
+                *ngFor="let asist of asistencia[ramo.id]"
+              >
+                <ion-list class="pad">
+                  {{asist.asistencia ? 'Presente' : 'Ausente'}}
+                </ion-list>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

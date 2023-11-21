@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <ion-card class="centered-card">
+    <ion-card-header>
+      <ion-card-title>Información del Usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="profile-image">
+        <img src="assets/perfil.PNG" alt="Imagen de perfil" />
+      </div>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label position="stacked">Nombre:</ion-label>
+          <ion-input readonly>{{ user().name }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo Electrónico:</ion-label>
+          <ion-input readonly>{{ user().email }}</ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button
+    class="iniciar"
+    (click)="cerrarSesion()"
+    expand="full"
+  >
+    Cerrar Sesión
+  </ion-button>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar class="tab-barcolor" slot="bottom">
+      <ion-tab-button
+        (click)="onTabClick('home')"
+        class="tab-buttoncolor"
+        tab="home"
+        layout="icon-start"
+      >
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+      <ion-tab-button
+        (click)="onTabClick('asistencia')"
+        class="tab-buttoncolor"
+        tab="asistencia"
+        layout="icon-start"
+      >
+        <ion-icon name="today-outline"></ion-icon>
+        <ion-label>Asistencia</ion-label>
+      </ion-tab-button>
+      <ion-tab-button
+        (click)="onTabClick('ramos')"
+        class="tab-buttoncolor"
+        tab="ramos"
+        layout="icon-start"
+      >
+        <ion-icon name="library-outline"></ion-icon>
+        <ion-label>Cursos</ion-label>
+      </ion-tab-button>
+      <ion-tab-button
+        (click)="onTabClick('perfil-user')"
+        class="tab-buttoncolor"
+        tab="perfil-user"
+        layout="icon-start"
+      >
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

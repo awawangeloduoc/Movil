@@ -1,0 +1,80 @@
+<div class="header">
+  <ion-header>
+    <ion-toolbar color="colorbkn">
+      <img src="assets/logo.png" class="header-logo" />
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<ion-content>
+  <ion-title class="title">Ingresa tus datos para crear una cuenta</ion-title>
+  <form [formGroup]="registrarForm" (ngSubmit)="submit()">
+    <div class="ion-padding">
+
+      <!-- Nombre -->
+      <ion-item>
+        <ion-input
+          placeholder="Nombre"
+          class="input"
+          required
+          type="text"
+          aria-label="name"
+          name="name"
+          formControlName="name"
+        ></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <div
+        class="Error"
+        *ngIf="registrarForm.get('name')?.invalid && registrarForm.get('name')?.touched"
+      >
+        Por favor, introduce un nombre
+      </div>
+
+      <!-- Correo -->
+      <ion-item>
+        <ion-input
+          placeholder="Correo electrónico"
+          class="input"
+          required
+          type="email"
+          aria-label="email"
+          name="email"
+          formControlName="email"
+        ></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-item>
+      <div
+        class="Error"
+        *ngIf="registrarForm.get('email')?.invalid && registrarForm.get('email')?.touched"
+      >
+        Por favor, introduce un correo
+      </div>
+
+      <!-- Contraseña -->
+      <ion-item>
+        <ion-input
+          placeholder="Contraseña"
+          class="input"
+          required
+          type="password"
+          name="password"
+          formControlName="password"
+        ></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div
+        class="Error"
+        *ngIf="registrarForm.get('password')?.invalid && registrarForm.get('password')?.touched"
+      >
+        Por favor, introduce una contraseña
+      </div>
+      <ion-button class="iniciar" type="submit" [disabled]="registrarForm.invalid"
+        >Registrar</ion-button
+      >
+    </div>
+    <div class="signup">
+      <p>¿Ya eres parte? <a [routerLink]="['/login']">Inicia sesión</a></p>
+    </div>
+  </form>
+</ion-content>

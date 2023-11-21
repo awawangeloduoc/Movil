@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="colorbkn">
+    <img
+      src="assets/logo.png"
+      alt="Logo de la aplicación"
+      class="header-logo"
+    />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <ion-text color="primary">
+    <h1>Bienvenido, {{ user().name}}</h1>
+  </ion-text>
+  <div class="container">
+    
+    <ion-button class="ion-padding-bottom ion-text-center iniciar" type="submit" [routerLink]="['/tab/asistencia']"
+      >Registrar Asistencia</ion-button
+    >
+    
+    <ion-button class="ion-padding-bottom ion-text-center iniciar" type="submit" [routerLink]="['/tab/ramos']"
+      >Ver asistencia</ion-button
+    >
+  </div>
+</ion-content>

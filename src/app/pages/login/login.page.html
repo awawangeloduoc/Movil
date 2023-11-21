@@ -1,0 +1,62 @@
+<div class="header">
+  <ion-header>
+    <ion-toolbar color="colorbkn">
+      <img src="assets/logo.png" class="header-logo" />
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+<ion-content>
+  <ion-title class="title">¡Bienvenido!</ion-title>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input
+          placeholder="Correo electrónico"
+          class="input"
+          required
+          type="email"
+          aria-label="email"
+          name="email"
+          formControlName="email"
+        ></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-item>
+      <div
+        class="Error"
+        *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+      >
+        Introduce un correo válido
+      </div>
+      <ion-item>
+        <ion-input
+          placeholder="Contraseña"
+          class="input"
+          required
+          type="password"
+          aria-label="password"
+          name="password"
+          formControlName="password"
+        ></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div
+        class="Error"
+        *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+      >
+        Introduce una contraseña válida
+      </div>
+      <ion-button class="iniciar" type="submit" [disabled]="loginForm.invalid"
+        >Iniciar sesión</ion-button
+      >
+    </div>
+    <div class="restablecer">
+      <a [routerLink]="['/restablecer']">Olvidé mi contraseña</a>
+    </div>
+    <div class="signup">
+      <p>
+        ¿No tienes cuenta? <a [routerLink]="['/signup']">Regístrate ahora</a>
+      </p>
+    </div>
+  </form>
+</ion-content>

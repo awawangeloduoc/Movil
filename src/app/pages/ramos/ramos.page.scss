@@ -1,0 +1,68 @@
+.custom-header {
+  --background: #151574;
+  color: #ffff00;
+}
+
+.titulo {
+  --background: #ffff00;
+  --color: #151574;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ion-card {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ion-card-header {
+  --background: #151574;
+  --color: #acac02;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ion-card-content {
+  padding: 10px;
+}
+
+.cuadro {
+  border: 2px solid #151574;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.fec {
+  background-color: #151574;
+  color: #ffff00;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  border-top-left-radius: 10px;
+}
+
+.asis {
+  background-color: #151574;
+  color: #ffff00;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  border-top-right-radius: 10px;
+}
+
+.fechas {
+  color: #151574;
+  font-weight: bold;
+  text-align: center;
+}
+
+.asistencias {
+  color: #151574;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pad {
+  padding: 5px;
+}

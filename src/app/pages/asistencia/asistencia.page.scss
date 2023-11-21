@@ -1,0 +1,20 @@
+.custom-header {
+  --background: #151574;
+  color: #ffff00;
+}
+
+.centered-favicon {
+  position: absolute;
+  bottom: 25px; /* Ajusta este valor según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 300%;
+  display: block;
+  
+}
+
+ion-fab-button {
+  --background: #151574;
+  --color:#ffff00;
+}
+
