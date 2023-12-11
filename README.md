@@ -18,7 +18,7 @@ EducApp es una aplicación móvil desarrollada con Ionic y Angular que permite a
 
 ## Imágenes de la aplicación
 
-![Foto de registrar usuario](![WhatsApp Image 2023-12-11 at 7 23 54 PM](https://github.com/awawangeloduoc/Movil/assets/107156626/412a075e-c446-4740-a252-7c185ae164a0)
+![WhatsApp Image 2023-12-11 at 7 23 54 PM](https://github.com/awawangeloduoc/Movil/assets/107156626/412a075e-c446-4740-a252-7c185ae164a0)
 
-)
+
 
