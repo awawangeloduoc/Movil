@@ -16,6 +16,14 @@ export class RamosPage {
   utilsSvc = inject(UtilsService);
 
   async ngOnInit() {
+    this.loadData();
+  }
+
+  async ionViewWillEnter() {
+    this.loadData();
+  }
+
+  async loadData() {
     this.ramos = await this.firebaseSvc.getSubjects();
 
     // Crea un mapa de asistencias por ID de asignatura
@@ -54,10 +62,8 @@ export class RamosPage {
       );
       return [];
     }
-
     return this.asistencia[nombreAsignatura];
   }
-
   user(): User {
     return this.utilsSvc.getLocal('user');
   }
