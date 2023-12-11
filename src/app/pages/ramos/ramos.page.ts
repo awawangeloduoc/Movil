@@ -15,6 +15,8 @@ export class RamosPage {
   firebaseSvc = inject(FirebaseService);
   utilsSvc = inject(UtilsService);
 
+  loading: boolean = false;
+
   async ngOnInit() {
     this.loadData();
   }
@@ -24,6 +26,7 @@ export class RamosPage {
   }
 
   async loadData() {
+    this.loading = true;
     this.ramos = await this.firebaseSvc.getSubjects();
 
     // Crea un mapa de asistencias por ID de asignatura
@@ -52,18 +55,20 @@ export class RamosPage {
     }
 
     this.asistencia = asistenciasPorId;
+    this.loading = false;
   }
 
   getAsistenciasPorAsignatura(nombreAsignatura: string) {
     if (!this.asistencia.hasOwnProperty(nombreAsignatura)) {
       console.log(
-        'No se encontró el nombre de la asignatura en el mapa: ',
+        'No se encontró: ',
         nombreAsignatura
       );
       return [];
     }
     return this.asistencia[nombreAsignatura];
   }
+
   user(): User {
     return this.utilsSvc.getLocal('user');
   }

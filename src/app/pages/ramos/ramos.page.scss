@@ -66,3 +66,10 @@
 .pad {
   padding: 5px;
 }
+
+ion-skeleton-text {
+  width: 100%;
+  height: 30px; /* Ajusta la altura según tus necesidades */
+  margin-bottom: 15px; /* Espaciado opcional entre los elementos */
+  border-radius: 15px; /* Ajusta el radio de borde según tus preferencias */
+}

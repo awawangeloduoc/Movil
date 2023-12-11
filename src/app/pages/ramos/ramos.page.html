@@ -6,7 +6,11 @@
 
 <ion-content class="custom-content">
   <ion-list *ngFor="let ramo of ramos">
-    <ion-card button (click)="toggleContent(ramo.id)">
+    <ion-card
+      *ngIf="!loading; else skeletonText"
+      button
+      (click)="toggleContent(ramo.id)"
+    >
       <ion-card-header>
         <ion-card-title>{{ramo.nombre_asignatura}}</ion-card-title>
       </ion-card-header>
@@ -39,5 +43,9 @@
         </ion-grid>
       </ion-card-content>
     </ion-card>
+
+    <ng-template #skeletonText>
+      <ion-skeleton-text></ion-skeleton-text>
+    </ng-template>
   </ion-list>
 </ion-content>
